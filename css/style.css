@@ -278,8 +278,11 @@ margin: 1.5rem;
 /* FOOTER */
 footer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;    
+    flex-wrap: wrap;    
+    justify-content: space-around;
+    align-items: center; 
+    font-size: var(--font-media);      
+    height: 15vh;  
 }
   
 .copyright {

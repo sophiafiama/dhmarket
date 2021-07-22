@@ -46,7 +46,8 @@ h2 {
 }
 
 .produtos-itens img {
-    width: 150px;
+    width: 152px;
+    height: 154px;
     margin-top: 1rem;
 }
 
@@ -60,7 +61,7 @@ h2 {
 .produtos-itens p{
     align-self: flex-start;
     padding-bottom: 1rem;
-    padding-left: 4rem;
+    padding-left: 1.5rem;
 }
 
 .produtos-itens-descricao {
@@ -93,7 +94,7 @@ h2 {
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 1200px) and (max-width: 1700px){
+@media (min-width: 1001px) and (max-width: 1700px){
     h2 {
         margin: 4rem 0 2.5rem 10%;
     }
@@ -102,12 +103,12 @@ h2 {
 
 @media (min-width: 721px) and (max-width: 1000px){
     h2 {
-        margin: 4rem 0 2.5rem 0;
+        margin: 4rem 0 2.5rem 20%;
     }
     .produtos {
         display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 300px);
     }
 
     .produtos-itens-preco {
@@ -125,8 +126,8 @@ h2 {
     }
     .produtos {
         display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 300px);
     }
     .produtos-itens-preco {
         font-size: var(--font-media);
@@ -137,10 +138,12 @@ h2 {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 620px) {
+    h2 {
+        margin: 4rem 0 2.5rem 5%;
+    }
     .produtos {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 400px;
         margin: 0 auto;
     }
 }

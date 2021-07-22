@@ -1,0 +1,61 @@
+/* Configurações gerais */
+:root {
+    --cor-primaria: black;
+    --cor-secundaria: white;
+    --fonte-pequena: 16px;
+    --font-media: 24px;
+    --font-grande: 32px;    
+}
+
+* {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Footer bar */
+
+footer {
+    display: inline-block;
+    position: fixed;    
+    padding: 20px;
+    border: none;
+    bottom: 0px;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    background: var(--cor-primaria);
+    font-size: var(--fonte-pequena);
+    color: var(--cor-secundaria);
+}
+
+/* Nota de copyright do footer e ícone de colab*/
+
+.footer-copyright-colab {
+    display: inline-block;
+    border: solid 3px red;
+    
+}
+
+ul {list-style-type: none;
+    
+}
+
+li {
+    
+    display:inline-block;
+    align-items: center;
+}
+
+
+/* Social media icons */
+.social-media-icos {
+    display: inline-block;
+    border: solid 3px yellow;
+    
+}
+
+ul {list-style-type: none;}
+
+a {text-decoration: none;}
+

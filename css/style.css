@@ -124,7 +124,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     background-color: var(--cor-de-fundo);
-    border-radius: 1.5rem;   
+    border-radius: 1.5rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .produtos-itens p{
     align-self: flex-start;
@@ -160,9 +161,14 @@ Foi utilizada a tag a para ficar mais fácil de direcionar
 }
 
 /* Animação do bottão quando passar o cursor por cima*/
-.produtos-itens a:hover {
-    transform: scale(1.1);
+.produtos-itens:hover {
+    transform: scale(1.07);
     transition: transform .4s ease-in-out;
+}
+.produtos-itens a:hover {
+    transform: scale(1.03);
+    opacity: 0.8;
+    transition:transform .3s ease-in, opacity .7s ease-in-out;
 }
 
 /* MEDIA QUERIES DOS PRODUTOS*/
@@ -178,17 +184,11 @@ Foi utilizada a tag a para ficar mais fácil de direcionar
         margin: 4rem 0 2.5rem 20%;
     }
     .produtos {
-        display: grid;
-        gap: 1.5rem;
         grid-template-columns: repeat(2, 300px);
     }
 
     .produtos-itens-preco {
         font-size: var(--font-media);
-    }
-    .produtos-itens a:hover {
-        transform: scale(1.05);
-        transition: transform .4s ease-in-out;
     }
 }
 
@@ -197,16 +197,10 @@ Foi utilizada a tag a para ficar mais fácil de direcionar
         margin: 4rem 0 2.5rem 0;
     }
     .produtos {
-        display: grid;
-        gap: 1.5rem;
         grid-template-columns: repeat(2, 300px);
     }
     .produtos-itens-preco {
         font-size: var(--font-media);
-    }
-    .produtos-itens a:hover {
-        transform: scale(1.05);
-        transition: transform .4s ease-in-out;
     }
 }
 

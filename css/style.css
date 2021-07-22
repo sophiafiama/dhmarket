@@ -4,7 +4,7 @@
     --cor-da-fonte: #9F9797;
     --cor-de-fundo: #FCF5EF;
     --cor-preta: #000;
-    font-size: 16px;
+    --cor-bhover: #7CC251;
     --fonte-pequena: 16px;
     --font-media: 24px;
     --font-grande: 32px;
@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 body {
     font-size: var(--fonte-pequena);
@@ -30,17 +29,27 @@ ul {
 a {
     text-decoration: none;
 }
+
+header {
+    position:sticky;
+    top: 0;
+    margin-bottom: 1rem;
+    z-index: 2;
+    width: 100%;
+    background-color: var(--cor-secundaria);
+}
   
 /*  NAVBAR */
   
 .menu {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 15px 0;
+    margin:auto;
+    max-width: 1200px;
+    padding: 1rem;
     display: flex; /* nesses caso, deixa o nav como flex-items, mas não a ul dentro dela. o .menu é o pai e o .nav é o filho */
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center; /* alinha ao centro na altura */
+
 }
   
 .menu-logo a img {
@@ -94,12 +103,18 @@ a {
 
 /* AQUI COMEÇA O ESTILO DOS 6 PRODUTOS*/
 
-
 h2 {
     font-size: var(--font-grande);
     color: var(--cor-preta);   
-    margin: 4rem 0 2.5rem 30rem;
+    margin: 0rem 0 2.5rem 7.5rem;
 }
+
+h3 {
+    font-size: var(--font-grande);
+    color: var(--cor-preta);   
+    text-align: center;
+}
+
 
 /* Transformando os itens em grid de 3 por 2*/
 .produtos {
@@ -153,22 +168,64 @@ Foi utilizada a tag a para ficar mais fácil de direcionar
 .produtos-itens a {
     text-decoration: none;
     color: var(--cor-secundaria);
-    background-color: var(--cor-primaria) ;
-    padding: 1rem 5rem;
-    margin-bottom: 2.5rem;
+    background-color: var(--cor-primaria);
+    padding: 0.5rem 4rem;
+    margin-bottom: 1rem;
     border-radius: 1rem;
     font-size: var(--font-media);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 /* Animação do bottão quando passar o cursor por cima*/
 .produtos-itens:hover {
-    transform: scale(1.07);
-    transition: transform .4s ease-in-out;
+    transition: transform 0.2s ease-out;
+    transform: scale(1.02);
+    cursor: pointer;
 }
 .produtos-itens a:hover {
-    transform: scale(1.03);
-    opacity: 0.8;
-    transition:transform .3s ease-in, opacity .7s ease-in-out;
+    background: var(--cor-bhover);
+    transition: background 0.4s ease-in-out;
+
+}
+
+label {
+    margin-right: 0.5rem;
+}
+
+#escolha {
+    font-size: var(--fonte-pequena);
+	margin: 0 auto;
+	border: none;
+	margin-bottom: 1rem;
+	border-radius: 2rem;
+}
+
+select {    
+    width:140px;  /* Tamanho final do select */    
+    overflow:hidden; /* Esconde o conteúdo que passar do tamanho especificado */
+    background-color: var(--cor-secundaria);
+} 
+    
+option {      
+    background: var(--cor-de-fundo);
+    color: var(--cor-preta);
+}
+
+.produtos-itens .detalhes {
+    text-align: center;
+	margin: 0 auto;
+	border: none;
+    color: var(--cor-primaria);
+    background: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria)
+
+}
+
+.produtos-itens .detalhes:hover {
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    background: var(--cor-secundaria);
+    transition: border 0.4s ease-in-out;
 }
 
 /* MEDIA QUERIES DOS PRODUTOS*/
@@ -215,3 +272,25 @@ Foi utilizada a tag a para ficar mais fácil de direcionar
 }
 
 /* AQUI TERMINA O ESTILO DOS 6 PRODUTOS*/
+
+.item img {
+    text-align: center;
+    justify-content: center;
+    background: var(--cor-de-fundo);
+    border-radius: 30px;
+    transform: scale(0.8);
+    width: 6.5rem;
+    height: 14.75rem;
+
+}
+.box-midias{
+    cursor: pointer;
+    padding: 20px;
+}
+
+.box-midias:hover{
+    transition: transform .6s ease-in-out;
+    transform: scale(0.9);
+    background: var(--cor-primaria);
+
+}

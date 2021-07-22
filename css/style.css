@@ -21,9 +21,63 @@ header, footer {
 }
 
 h2 {
+    font-size: var(--font-grande);
+    color: var(--cor-primaria);
     text-align: left ;
-    margin: 2rem;
+    margin: 2rem 5rem;
 }
-main {
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto; 
+    text-align: center; 
+}
 
+
+.produtos-itens{
+    position: relative;
+    flex: 1 1 300px; /* primeiro expandir segundo ficar menor e o ultimo a base de 200px só mudando isso não vai causar efeito nos elementos, você tem que ir no pai e colocar wrap*/
+    margin: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+
+.produtos-itens:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+    transition: transform .4s ease-in-out, opacity .3s ease;
+}
+
+.produtos-itens > p {
+    font-size: var(--font-media);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    color: white;
+    opacity: 0;
+    
+}
+.produtos-itens > p:hover{
+    opacity: 1;    
+    transition: opacity .7s ease-in-out;
+}
+
+
+@media (max-width: 720px) {
+    .produtos {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .produtos-itens > p{
+        padding: 3rem;
+        font-size: var(--fonte-pequena);
+    }
 }

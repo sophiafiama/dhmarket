@@ -1,0 +1,29 @@
+:root {
+    --cor-primaria: black;
+    --cor-secundaria: white;
+    font-size: 16px;
+    --fonte-pequena: 16px;
+    --font-media: 24px;
+    --font-grande: 32px;
+    font-family: sans-serif;    
+
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    width: 100vw;
+    height: 10vh;
+    position: sticky;
+    background-color: green;
+}
+
+h2 {
+    text-align: left ;
+    margin: 2rem;
+}
+main {
+
+}

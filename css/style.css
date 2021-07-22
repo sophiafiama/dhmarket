@@ -219,6 +219,9 @@ Foi utilizada a tag a para ficar mais fácil de direcionar
     .produtos-itens-preco {
         font-size: var(--font-media);
     }
+    .social_media i {
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 620px) {

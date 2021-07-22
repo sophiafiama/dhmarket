@@ -274,3 +274,30 @@ margin: 1.5rem;
     text-transform: uppercase;
 }
 /* FINAL DO NEWSLETTER */
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+  
+.copyright {
+    margin: 20px;
+}
+  
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+  
+.social_media {
+    margin: 20px;
+}
+  
+.social_media i {
+    color: var(--cor-primaria);
+}  
+
+

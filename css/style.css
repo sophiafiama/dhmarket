@@ -8,7 +8,7 @@
     --fonte-pequena: 16px;
     --font-media: 24px;
     --font-grande: 32px;
-    font-family: sans-serif;  
+    font-family: "Poppins", sans-serif;  
     overflow-x: hidden; 
 }
 * {
@@ -16,16 +16,83 @@
     margin: 0;
     padding: 0;
 }
-header, footer {
-    width: 100vw;
-    height: 10vh;
-    position: sticky;
-    background-color: green;
-}
 
-main {
-    max-width: 100vw;
+
+body {
+    font-size: var(--fonte-pequena);
+    background-color: var(--cor-secundaria);  
 }
+  
+ul {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+/*  NAVBAR */
+  
+.menu {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex; /* nesses caso, deixa o nav como flex-items, mas não a ul dentro dela. o .menu é o pai e o .nav é o filho */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* alinha ao centro na altura */
+}
+  
+.menu-logo a img {
+    width: 50%;
+}
+  
+.menu-nav ul {
+    display: flex; /* é o pai, e agora os li viraram flex-items */
+    flex-wrap: wrap; /* para quebrar e caber qnd diminuir a tela */
+}
+  
+.menu-nav a {
+    font-size: (var(--font-grande));
+    display: block; /* pq por padrão o a é inline, e eu quero que o padding pegue em todos os lados */
+    padding: 10px;
+    color: (var(--cor-primaria));
+}
+  
+/* NAVBAR - ANIMAÇÃO */
+  
+.menu-nav a:hover {
+    color: #ee952c;
+}
+  
+/* RESPONSIVIDADE */
+  
+  @media (max-width: 1068px) {
+    .menu-logo {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .menu-logo a img {
+      width: 30%;
+    }
+  
+    .menu-nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 440px) {
+    .menu-nav a {
+      font-size: (var(--fonte-pequena));
+      padding: 3px;
+    }
+  }
+
+
+/* AQUI COMEÇA O ESTILO DOS 6 PRODUTOS*/
 
 
 h2 {
@@ -34,6 +101,7 @@ h2 {
     margin: 4rem 0 2.5rem 30rem;
 }
 
+/* Transformando os itens em grid de 3 por 2*/
 .produtos {
     display: grid;
     grid-template-columns: repeat(3, 300px);
@@ -50,7 +118,7 @@ h2 {
     height: 154px;
     margin-top: 1rem;
 }
-
+/* Estilização de dentro das box dos produtos*/
 .produtos-itens{
     display: flex;
     flex-direction: column;
@@ -63,7 +131,7 @@ h2 {
     padding-bottom: 1rem;
     padding-left: 1.5rem;
 }
-
+/* Estilização dos paragráfos dentro dos produtos*/
 .produtos-itens-descricao {
     font-size: var(--fonte-pequena);
     margin-top: 1rem;
@@ -77,6 +145,10 @@ h2 {
     color: var(--cor-primaria);
 }
 
+/* 
+Estilização do botão de adicionar
+Foi utilizada a tag a para ficar mais fácil de direcionar
+*/
 .produtos-itens a {
     text-decoration: none;
     color: var(--cor-secundaria);
@@ -87,13 +159,13 @@ h2 {
     font-size: var(--font-media);
 }
 
-
+/* Animação do bottão quando passar o cursor por cima*/
 .produtos-itens a:hover {
     transform: scale(1.1);
     transition: transform .4s ease-in-out;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES DOS PRODUTOS*/
 @media (min-width: 1001px) and (max-width: 1700px){
     h2 {
         margin: 4rem 0 2.5rem 10%;
@@ -147,3 +219,5 @@ h2 {
         margin: 0 auto;
     }
 }
+
+/* AQUI TERMINA O ESTILO DOS 6 PRODUTOS*/

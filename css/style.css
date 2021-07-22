@@ -90,6 +90,23 @@ a {
       padding: 3px;
     }
   }
+/* PARALLAX */
+  .parallax {
+    background-image: url("../assets/banner-bk.png");
+    min-height: 50vh;
+    /* width: 100vw; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+.parallax img{
+    width: 60%;
+}
 
 
 /* AQUI COMEÇA O ESTILO DOS 6 PRODUTOS*/
@@ -215,3 +232,45 @@ Foi utilizada a tag a para ficar mais fácil de direcionar
 }
 
 /* AQUI TERMINA O ESTILO DOS 6 PRODUTOS*/
+
+/* NEWSLETTER */
+
+.newsletter{
+    background-color: #FCF5EF;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    height: 19.25rem;
+    padding: 2rem 0;
+}
+
+.newsletter div{
+margin: 1.5rem;
+}
+ 
+.newsletter h4{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter div input[type="email"]{
+    height: 2.5rem ;
+    width: 25rem;
+    text-align: center;
+    outline: none;  
+}
+
+
+
+.newsletter button{
+    width: 11.75rem;
+    height: 2.5rem ;
+    border-radius: 0.5rem;
+    color: #FFFFFF;
+    background-color: #EE952C ;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+/* FINAL DO NEWSLETTER */

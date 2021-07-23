@@ -53,6 +53,12 @@ body::-webkit-scrollbar {
     margin: 1rem 0;
 }
 
+.media button:hover{
+    border: 0.09rem solid black;
+    transition: transform 0.1s ease-out;
+    transform: scale(0.99);
+}
+
 .media button {
     padding: 0.3rem;
     margin-bottom: 1rem;
@@ -61,6 +67,7 @@ body::-webkit-scrollbar {
     height: 1.8rem;
     width: 24rem;
     cursor: pointer;
+    border:  0.09rem solid transparent;
 }
 
 .media button span {

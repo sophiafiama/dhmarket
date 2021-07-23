@@ -239,7 +239,6 @@ Foi utilizada a tag a para ficar mais fácil de direcionar
 .produtos-itens:hover {
     transition: transform 0.2s ease-out;
     transform: scale(1.02);
-    cursor: pointer;
 }
 .produtos-itens a:hover {
     background: var(--cor-bhover);

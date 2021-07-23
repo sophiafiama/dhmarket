@@ -357,6 +357,7 @@ option {
         margin-top: 2rem;
     }
     footer {
+        margin-top: 2rem;
         flex-direction: column; 
         justify-content: center;
         flex-wrap: nowrap !important;   

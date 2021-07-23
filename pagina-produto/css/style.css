@@ -102,6 +102,7 @@ a {
     margin: auto;
     flex-wrap: wrap;
     background-color: var(--cor-de-fundo);
+    margin-top: 4rem;
 }
 
 .produto-img {
@@ -170,7 +171,8 @@ footer {
     justify-content: space-around;
     align-items: center; 
     font-size: var(--fonte-pequena);      
-    height: 15vh;  
+    height: 15vh;
+    margin-top: 5rem;
 }
   
 .copyright {
@@ -190,3 +192,14 @@ footer {
 .social_media i {
     color: var(--cor-primaria);
 }  
+
+@media (max-width: 700px) {
+  footer {
+    flex-direction: column; 
+    justify-content: center;
+    flex-wrap: nowrap;   
+  }
+  .icons {
+    margin-bottom: 5rem;
+  }
+}

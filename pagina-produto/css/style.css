@@ -1,0 +1,172 @@
+:root {
+    --cor-primariaPro2: #EE952C;
+    --cor-primariaPro: #FFFFFF;
+    --cor-da-fonte: #9F9797;
+    --cor-de-fundo: #FCF5EF;
+    --cor-preta: #000;
+    font-size: 16px;
+    --fonte-pequena: 16px;
+    --font-media: 24px;
+    --font-grande: 32px;
+    font-family: sans-serif;  
+    overflow-x: hidden; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-size: var(--fonte-pequena);
+    background-color: var(--cor-secundaria);
+    font-family: "Poppins", sans-serif;
+  }
+ul {
+    list-style: none;
+  }
+a {
+    text-decoration: none;
+  }
+/*  NAVBAR */
+
+.menu {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex; /* nesses caso, deixa o nav como flex-items, mas não a ul dentro dela. o .menu é o pai e o .nav é o filho */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /* alinha ao centro na altura */
+  }
+  
+.menu-logo a img {
+    width: 50%;
+  }
+  
+.menu-nav ul {
+    display: flex; /* é o pai, e agora os li viraram flex-items */
+    flex-wrap: wrap; /* para quebrar e caber qnd diminuir a tela */
+  }
+  
+.menu-nav a {
+    font-size: (var(--font-grande));
+    display: block; /* pq por padrão o a é inline, e eu quero que o padding pegue em todos os lados */
+    padding: 10px;
+    color: (var(--cor-primariaPro2));
+  }
+  
+  /* NAVBAR - ANIMAÇÃO */
+  
+.menu-nav a:hover {
+    color: #ee952c;
+  }
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1068px) {
+    .menu-logo {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .menu-logo a img {
+      width: 30%;
+    }
+  
+    .menu-nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 440px) {
+    .menu-nav a {
+      font-size: (var(--fonte-pequena));
+      padding: 3px;
+    }
+  }
+
+/*  Produto */
+
+
+.prod-selecionado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    background-color: var(--cor-de-fundo);
+    
+}
+
+.img-produto img {
+    /* width: 50%; */
+    /* max-width: 40rem; 
+    min-width: 20rem; */
+
+}
+
+.produto-img {
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+}
+
+.nome-produto {
+    margin-bottom: 1.5rem;
+
+}
+h3 {
+    font-size: 2rem;
+}
+.preco {
+    margin: 3rem 0 2.5rem;
+    color: var(--cor-primariaPro2);
+
+}
+
+.descricao-produto button {
+    text-decoration: none;
+    color: var(--cor-primariaPro);
+    background-color: var(--cor-primariaPro2) ;
+    padding: 1rem 5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 1rem;
+    font-size: var(--font-media);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-around;
+    align-items: center; 
+    font-size: var(--font-media);      
+    height: 15vh;  
+}
+  
+.copyright {
+    margin: 20px;
+}
+  
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+  
+.social_media {
+    margin: 20px;
+}
+  
+.social_media i {
+    color: var(--cor-primaria);
+}  

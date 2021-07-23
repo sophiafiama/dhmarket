@@ -77,9 +77,20 @@ body::-webkit-scrollbar {
     border: none;
 }
 
+.inputs input:hover{
+background-color: #f0d1aeb7;
+}
+
 .inputs {
     margin-bottom: 0rem;
+  
 }
+
+input{
+    border: 1px solid rgba(231, 224, 224, 0.883);
+    border-radius: 1rem;
+
+    }
 
 .inputs div input {
     height: 2rem;
@@ -136,6 +147,8 @@ label{
     text-transform: uppercase;
     cursor: pointer;
     margin-top: 0.8rem;
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
 }
 
 .conta p{
@@ -143,4 +156,15 @@ label{
   opacity: 0.5;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* ANIMAÇÕES DO BOTÃO ENTRAR */
+.conectar button:hover{
+    background-color:#b4650c;
+    color: whitesmoke;
+}
+
+.conectar button:active{
+    transition: transform 0.2s ease-out;
+    transform: scale(0.98);
 }

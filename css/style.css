@@ -127,10 +127,37 @@ header {
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative; 
   }
 
 .parallax img{
-    width: 60%;
+    width: 70%;
+    margin: 3rem 0;
+}
+
+.parallax button{
+    position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 0.5rem 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  text-transform: uppercase;
+}
+
+.parallax a{
+    text-decoration: none;
+    color: var(--cor-de-fundo);
+}
+
+.parallax button:hover{
+    background: var(--cor-bhover);
+    transition: background 0.4s ease-in-out;
 }
 
 /* CAROUSEL*/
@@ -310,6 +337,16 @@ option {
     h2 {
         margin: 4rem 0 2.5rem 0;
     }
+
+    .parallax img{
+         width: 80%;
+    }
+
+    .parallax button{
+        top: 70%;
+        padding: 0.5rem 2rem;
+    }
+
     .produtos {
         grid-template-columns: repeat(2, 300px);
     }
@@ -327,6 +364,8 @@ option {
       .icons {
         margin-bottom: 5rem;
       }
+
+
 }
 
 @media (max-width: 620px) {

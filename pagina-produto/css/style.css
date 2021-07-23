@@ -1,16 +1,18 @@
 :root {
-    --cor-primariaPro2: #EE952C;
-    --cor-primariaPro: #FFFFFF;
-    --cor-da-fonte: #9F9797;
-    --cor-de-fundo: #FCF5EF;
-    --cor-preta: #000;
-    font-size: 16px;
-    --fonte-pequena: 16px;
-    --font-media: 24px;
-    --font-grande: 32px;
-    font-family: sans-serif;  
-    overflow-x: hidden; 
+  --cor-primaria: #EE952C;
+  --cor-secundaria: #FFFFFF;
+  --cor-da-fonte: #9F9797;
+  --cor-de-fundo: #FCF5EF;
+  --cor-bhover: #7CC251;
+  --cor-preta: #000;
+  font-size: 16px;
+  --fonte-pequena: 16px;
+  --font-media: 24px;
+  --font-grande: 32px;
+  font-family: "Poppins", sans-serif;  
+  overflow-x: hidden; 
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -100,47 +102,65 @@ a {
     margin: auto;
     flex-wrap: wrap;
     background-color: var(--cor-de-fundo);
-    
-}
-
-.img-produto img {
-    /* width: 50%; */
-    /* max-width: 40rem; 
-    min-width: 20rem; */
-
 }
 
 .produto-img {
     width: 100%;
     max-width: 25rem;
     height: auto;
+    margin-top: 1rem;
 }
 
 .nome-produto {
-    margin-bottom: 1.5rem;
-
+    margin-top: 2.5rem;
 }
+
+.descricao-produto {
+  margin-left: 2rem;
+}
+
+.descricao-produto p{
+  margin-top: 0.5rem;
+}
+
 h3 {
     font-size: 2rem;
 }
-.preco {
-    margin: 3rem 0 2.5rem;
-    color: var(--cor-primariaPro2);
 
+.preco {
+    margin: 2.5rem 0 2.5rem;
+    color: var(--cor-primaria);
+}
+
+label {
+  margin-right: 0.5rem;
+}
+
+#escolha {
+  font-size: var(--fonte-pequena);
+margin: 0 auto;
+border: none;
+margin-bottom: 2.5rem;
+border-radius: 2rem;
 }
 
 .descricao-produto button {
     text-decoration: none;
-    color: var(--cor-primariaPro);
-    background-color: var(--cor-primariaPro2) ;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria) ;
     padding: 1rem 5rem;
     margin-bottom: 2.5rem;
     border-radius: 1rem;
-    font-size: var(--font-media);
+    font-size: var(--fonte-pequena);
     border: none;
     cursor: pointer;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
-    
+    text-transform: uppercase;
+}
+
+.descricao-produto button:hover {
+    background: var(--cor-bhover);
+    transition: background 0.4s ease-in-out;
 }
 
 /* FOOTER */
@@ -149,7 +169,7 @@ footer {
     flex-wrap: wrap;    
     justify-content: space-around;
     align-items: center; 
-    font-size: var(--font-media);      
+    font-size: var(--fonte-pequena);      
     height: 15vh;  
 }
   

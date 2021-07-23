@@ -6,10 +6,28 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #fdad52;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #d48224;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #fdad52;  /* creates padding around scroll thumb */
+  }
 
 .img {
   width: 25rem;
   margin-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .container-login {
@@ -18,10 +36,11 @@
     justify-content: center;
     justify-items: center;
     text-align: center;
-    margin: auto;
+    margin: 10rem auto;
     width: 30rem;
     background-color: #FCF5EF;
-
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 2rem;
 }
 
 .column {
@@ -58,9 +77,20 @@
     border: none;
 }
 
+.inputs input:hover{
+background-color: #f0d1aeb7;
+}
+
 .inputs {
     margin-bottom: 0rem;
+  
 }
+
+input{
+    border: 1px solid rgba(231, 224, 224, 0.883);
+    border-radius: 1rem;
+
+    }
 
 .inputs div input {
     height: 2rem;
@@ -117,6 +147,8 @@ label{
     text-transform: uppercase;
     cursor: pointer;
     margin-top: 0.8rem;
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
 }
 
 .conta p{
@@ -124,4 +156,15 @@ label{
   opacity: 0.5;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* ANIMAÇÕES DO BOTÃO ENTRAR */
+.conectar button:hover{
+    background-color:#b4650c;
+    color: whitesmoke;
+}
+
+.conectar button:active{
+    transition: transform 0.2s ease-out;
+    transform: scale(0.98);
 }
